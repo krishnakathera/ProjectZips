@@ -1,0 +1,112 @@
+{
+  "source": "Venkat project report (section 8), drop stores adjusted",
+  "dropStores": {
+    "count": 20,
+    "avgPerStore": 1500000,
+    "total": 30000000,
+    "displayAvg": "₹15L"
+  },
+  "blocks": [
+    {
+      "id": "8a",
+      "title": "Permits and fees",
+      "items": [
+        {
+          "item": "Permits",
+          "amount": 1000000
+        },
+        {
+          "item": "Architectural fees",
+          "amount": 500000
+        }
+      ],
+      "total": 1500000
+    },
+    {
+      "id": "8b",
+      "title": "Land, construction and setup",
+      "items": [
+        {
+          "item": "Land",
+          "amount": 20000000
+        },
+        {
+          "item": "Main store construction",
+          "amount": 10000000
+        },
+        {
+          "item": "Point of sale system",
+          "amount": 1000000
+        },
+        {
+          "item": "Electrical setup",
+          "amount": 1000000
+        },
+        {
+          "item": "Setup fee & expenses",
+          "amount": 2500000
+        }
+      ],
+      "total": 34500000
+    },
+    {
+      "id": "8c",
+      "title": "Equipment",
+      "items": [
+        {
+          "item": "Dry cleaning equipment",
+          "amount": 15000000
+        },
+        {
+          "item": "Washing machines, boilers, etc.",
+          "amount": 2500000
+        },
+        {
+          "item": "Delivery charges",
+          "amount": 500000
+        },
+        {
+          "item": "CCTV cameras",
+          "amount": 200000
+        }
+      ],
+      "total": 18200000
+    },
+    {
+      "id": "8d",
+      "title": "Drop store setup",
+      "items": [
+        {
+          "item": "20 stores × ₹15L avg",
+          "amount": 30000000
+        }
+      ],
+      "total": 30000000,
+      "note": "App assumption: ₹15L average per drop store (Venkat doc listed ₹3L/store)."
+    },
+    {
+      "id": "8e",
+      "title": "Initial advertising",
+      "items": [
+        {
+          "item": "Initial advertising",
+          "amount": 2500000
+        }
+      ],
+      "total": 2500000
+    },
+    {
+      "id": "8f",
+      "title": "Working capital (6 months)",
+      "items": [
+        {
+          "item": "Working capital",
+          "amount": 5000000
+        }
+      ],
+      "total": 5000000
+    }
+  ],
+  "grandTotal": 91700000,
+  "grandTotalDisplay": "₹9.17 Cr"
+}

@@ -1,0 +1,71 @@
+{
+  "phases": [
+    {
+      "id": 1,
+      "name": "Phase 1",
+      "timeline": "Months 0–24",
+      "title": "Hyderabad Hub-Spoke + Tier-2 Expansion",
+      "description": "Establish Tukkuguda central plant, scale drop network across Hyderabad metro, expand to Warangal, Karimnagar, and Nizamabad.",
+      "highlights": [
+        "1 central plant at Tukkuguda (ORR Exit 14)",
+        "20 drop stores at launch @ ₹15L avg (hub-and-spoke)",
+        "4,000 → 7,000 garments/day at scale",
+        "Tier-2 city pilots: Warangal, Karimnagar, Nizamabad",
+        "100% company-operated for quality control"
+      ],
+      "metrics": {
+        "drops": "20",
+        "dropAvg": "₹15L",
+        "garmentsPerDay": "7,000",
+        "cities": 4,
+        "investment": "₹9.17 Cr CAPEX"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Phase 2",
+      "timeline": "Months 24–48",
+      "title": "National Metro Expansion",
+      "description": "Replicate hub-spoke model in major metros via master franchise, with second central plant evaluation.",
+      "highlights": [
+        "Enter Bengaluru, Chennai, Pune, Mumbai, Delhi, Kolkata",
+        "Master franchise model for capital efficiency",
+        "Second central plant evaluation",
+        "10,000+ garments/day network-wide",
+        "Brand + tech + supply chain retained centrally"
+      ],
+      "metrics": {
+        "drops": "500+",
+        "garmentsPerDay": "10,000+",
+        "cities": 6,
+        "model": "Hybrid franchise"
+      }
+    }
+  ],
+  "rollout": [
+    { "track": "Central Plant", "start": 0, "end": 4, "phase": 1 },
+    { "track": "Flagship Stores", "start": 1, "end": 8, "phase": 1 },
+    { "track": "Additional Drops", "start": 2, "end": 18, "phase": 1 },
+    { "track": "Route Development", "start": 3, "end": 12, "phase": 1 },
+    { "track": "Tier-2 Cities", "start": 12, "end": 24, "phase": 1 },
+    { "track": "Metro Expansion", "start": 24, "end": 48, "phase": 2 },
+    { "track": "Franchise Rollout", "start": 24, "end": 42, "phase": 2 }
+  ],
+  "modelCards": [
+    {
+      "title": "Hub & Spoke",
+      "description": "Central plant at Tukkuguda processes at scale. Drop kiosks collect — lower rent, higher density.",
+      "icon": "🏭"
+    },
+    {
+      "title": "EZ Drop Kiosks",
+      "description": "150–300 sq ft micro hubs at gated communities, hospitals, and IT parks. Skip the queue.",
+      "icon": "📦"
+    },
+    {
+      "title": "In by 9, Out by 5",
+      "description": "24–48 hour turnaround with route-optimized pickup and delivery across Hyderabad.",
+      "icon": "⚡"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "kpis": [
+    { "label": "Telangana Population", "value": "3.87 Cr", "sub": "2026 projection", "source": "StatisticsTimes / NC Technical Group" },
+    { "label": "Hyderabad Metro", "value": "1.16 Cr", "sub": "2026 estimate", "source": "MacroTrends" },
+    { "label": "Households", "value": "~1.3 Cr", "sub": "Telangana families", "source": "Deccan Chronicle 2026" },
+    { "label": "Telangana PCI", "value": "₹4.19L", "sub": "FY 2025-26", "source": "State budget" },
+    { "label": "IT Jobs", "value": "11L+", "sub": "By Dec 2026", "source": "Telangana IT Dept" },
+    { "label": "Laundry Market", "value": "$2.7B", "sub": "India 2025", "source": "IMARC" }
+  ],
+  "stateOverview": {
+    "state": "Telangana",
+    "population2026": 38665000,
+    "urbanPercent": 50.08,
+    "households": 13000000,
+    "literacyUrban": 82.9,
+    "itWorkforce": 1100000,
+    "gccProfessionals": 300000
+  },
+  "tradeRadius": [
+    {
+      "anchor": "Tukkuguda (Central Plant)",
+      "pop3km": 85000,
+      "pop5km": 220000,
+      "pop10km": 650000,
+      "households5km": 52000,
+      "incomeTier": "Middle — rising suburban"
+    },
+    {
+      "anchor": "Gachibowli (Flagship)",
+      "pop3km": 280000,
+      "pop5km": 650000,
+      "pop10km": 1400000,
+      "households5km": 155000,
+      "incomeTier": "Upper-middle to affluent"
+    },
+    {
+      "anchor": "Madhapur (Flagship)",
+      "pop3km": 320000,
+      "pop5km": 720000,
+      "pop10km": 1550000,
+      "households5km": 171000,
+      "incomeTier": "IT professional dominant"
+    },
+    {
+      "anchor": "Kukatpally (Flagship)",
+      "pop3km": 350000,
+      "pop5km": 780000,
+      "pop10km": 1600000,
+      "households5km": 186000,
+      "incomeTier": "Mass-premium sweet spot"
+    }
+  ],
+  "incomeTiers": [
+    { "name": "Mass", "share": 45, "income": "₹25k–50k/mo", "propensity": "Wash & iron, ₹999 sub" },
+    { "name": "Aspirational", "share": 35, "income": "₹50k–1.2L/mo", "propensity": "Mix wash + premium care" },
+    { "name": "Premium", "share": 15, "income": "₹1.2L–3L/mo", "propensity": "Saree/suit care" },
+    { "name": "Elite", "share": 5, "income": "₹3L+/mo", "propensity": "Convenience-led flagship" }
+  ],
+  "districts": [
+    { "name": "Hyderabad", "pop2026": 10142000 },
+    { "name": "Rangareddy", "pop2026": 6459323, "popLow": 5719855 },
+    { "name": "Medchal-Malkajgiri", "pop2026": 2645527 }
+  ]
+}

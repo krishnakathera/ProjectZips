@@ -1,0 +1,62 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "route-south",
+        "name": "South ORR Loop",
+        "description": "Tukkuguda → Shamshabad → Adibatla → Maheshwaram → Kongara Kalan"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [78.4764, 17.2092],
+          [78.4294, 17.2403],
+          [78.5426, 17.2389],
+          [78.4312, 17.1869],
+          [78.5120, 17.2550],
+          [78.4764, 17.2092]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "route-west",
+        "name": "West IT Spoke",
+        "description": "Gachibowli → Madhapur → Kondapur → Financial District → Kokapet → Narsingi"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [78.3482, 17.4439],
+          [78.3902, 17.4484],
+          [78.3636, 17.4615],
+          [78.3427, 17.4169],
+          [78.3258, 17.3930],
+          [78.3364, 17.3908],
+          [78.3482, 17.4439]
+        ]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "route-northwest",
+        "name": "Northwest Residential Spoke",
+        "description": "Kukatpally → Miyapur → Nizampet → Bachupally"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[
+          [78.4138, 17.4849],
+          [78.3572, 17.4967],
+          [78.3860, 17.5194],
+          [78.3891, 17.5402],
+          [78.4138, 17.4849]
+        ]]
+      }
+    }
+  ]
+}

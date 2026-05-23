@@ -1,0 +1,16 @@
+{
+  "positioning": "Dry clean price. Dhobi cost.",
+  "comparison": [
+    { "item": "Shirt", "premium": "₹120–200", "market": "₹79–99", "zipsIndia": "₹40–60" },
+    { "item": "Trousers", "premium": "₹150+", "market": "₹80–100", "zipsIndia": "₹60–80" },
+    { "item": "Saree", "premium": "₹250+", "market": "₹150–200", "zipsIndia": "₹120–150" },
+    { "item": "Suit (2-pc)", "premium": "₹500–800", "market": "₹350–450", "zipsIndia": "₹200–280" },
+    { "item": "Wash & Fold / kg", "premium": "—", "market": "₹60–90", "zipsIndia": "₹55–70" }
+  ],
+  "competitors": {
+    "fabricare": { "position": "Premium", "shirt": "₹120–200" },
+    "uclean": { "position": "Franchise wash & fold", "shirt": "₹60–80" },
+    "tumbledry": { "position": "Tech pickup", "shirt": "₹80–100" },
+    "localDhobi": { "position": "Unorganized", "shirt": "₹10–20" }
+  }
+}

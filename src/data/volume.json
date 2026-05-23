@@ -1,0 +1,33 @@
+{
+  "plant": {
+    "location": "Tukkuguda, ORR Exit 14",
+    "capacityMin": 3000,
+    "capacityMax": 10000,
+    "breakEvenDaily": 5769,
+    "targetDaily": 6000
+  },
+  "milestones": [
+    { "period": "Mo 0–3", "drops": "8–12", "garmentsMin": 800, "garmentsMax": 1200 },
+    { "period": "Mo 4–12", "drops": "25–50", "garmentsMin": 2000, "garmentsMax": 5000 },
+    { "period": "Mo 13–24", "drops": "50–100+", "garmentsMin": 5000, "garmentsMax": 7000 },
+    { "period": "Mo 25–48", "drops": "Multi-city", "garmentsMin": 7000, "garmentsMax": 10000 }
+  ],
+  "projections": [
+    { "month": "M1", "garments": 900, "drops": 10 },
+    { "month": "M3", "garments": 1200, "drops": 12 },
+    { "month": "M6", "garments": 2800, "drops": 30 },
+    { "month": "M9", "garments": 4000, "drops": 45 },
+    { "month": "M12", "garments": 5000, "drops": 55 },
+    { "month": "M18", "garments": 6200, "drops": 75 },
+    { "month": "M24", "garments": 7000, "drops": 100 },
+    { "month": "M36", "garments": 9000, "drops": 120 },
+    { "month": "M48", "garments": 10000, "drops": 150 }
+  ],
+  "financials": {
+    "avgPrice": 80,
+    "costPerGarment": 50,
+    "fixedMonthlyCost": 4500000,
+    "targetRevenueYear1": "₹10–12 Cr",
+    "targetEbitdaYear3": "25%+"
+  }
+}

@@ -1,0 +1,279 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "plant-001",
+        "name": "Zips India Central Plant",
+        "type": "central_plant",
+        "phase": 1,
+        "rationale": "ORR Exit 14 logistics hub. Lower rent, airport & Pharma City access.",
+        "pop5km": 220000,
+        "households5km": 52000,
+        "capacity": "3,000–10,000 garments/day"
+      },
+      "geometry": { "type": "Point", "coordinates": [78.4764, 17.2092] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "flag-001",
+        "name": "Gachibowli",
+        "type": "flagship",
+        "phase": 1,
+        "rationale": "AIG/KIMS hospital cluster + IT + PG density",
+        "pop5km": 650000,
+        "households5km": 155000
+      },
+      "geometry": { "type": "Point", "coordinates": [78.3482, 17.4439] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "flag-002",
+        "name": "Madhapur / HITEC City",
+        "type": "flagship",
+        "phase": 1,
+        "rationale": "Offices, hostels, malls — highest IT footfall",
+        "pop5km": 720000,
+        "households5km": 171000
+      },
+      "geometry": { "type": "Point", "coordinates": [78.3902, 17.4484] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "flag-003",
+        "name": "Kondapur",
+        "type": "flagship",
+        "phase": 1,
+        "rationale": "KIMS, Care Hospital, Apollo Cradle medical cluster",
+        "pop5km": 680000,
+        "households5km": 162000
+      },
+      "geometry": { "type": "Point", "coordinates": [78.3636, 17.4615] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "flag-004",
+        "name": "Financial District",
+        "type": "flagship",
+        "phase": 1,
+        "rationale": "Nanakramguda corporate + premium apartments",
+        "pop5km": 420000,
+        "households5km": 100000
+      },
+      "geometry": { "type": "Point", "coordinates": [78.3427, 17.4169] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "flag-005",
+        "name": "Kukatpally / KPHB",
+        "type": "flagship",
+        "phase": 1,
+        "rationale": "Dense middle-class + metro corridor",
+        "pop5km": 780000,
+        "households5km": 186000
+      },
+      "geometry": { "type": "Point", "coordinates": [78.4138, 17.4849] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "flag-006",
+        "name": "Jubilee Hills",
+        "type": "flagship",
+        "phase": 1,
+        "rationale": "Elite grooming segment — premium convenience",
+        "pop5km": 380000,
+        "households5km": 90000
+      },
+      "geometry": { "type": "Point", "coordinates": [78.4078, 17.4229] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "flag-007",
+        "name": "Osmania / Afzalgunj",
+        "type": "flagship",
+        "phase": 1,
+        "rationale": "Student belt — price-sensitive, high volume",
+        "pop5km": 520000,
+        "households5km": 124000
+      },
+      "geometry": { "type": "Point", "coordinates": [78.4744, 17.3853] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "flag-008",
+        "name": "Shamshabad / RGIA",
+        "type": "flagship",
+        "phase": 1,
+        "rationale": "Airport staff, hotels, GMR Aero City",
+        "pop5km": 180000,
+        "households5km": 43000
+      },
+      "geometry": { "type": "Point", "coordinates": [78.4294, 17.2403] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "add-001",
+        "name": "Kokapet",
+        "type": "additional",
+        "phase": 1,
+        "rationale": "Premium towers & gated communities",
+        "pop5km": 320000,
+        "households5km": 76000
+      },
+      "geometry": { "type": "Point", "coordinates": [78.3258, 17.3930] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "add-002",
+        "name": "Tellapur",
+        "type": "additional",
+        "phase": 1,
+        "rationale": "ORR west villa communities",
+        "pop5km": 210000,
+        "households5km": 50000
+      },
+      "geometry": { "type": "Point", "coordinates": [78.2612, 17.4531] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "add-003",
+        "name": "Narsingi",
+        "type": "additional",
+        "phase": 1,
+        "rationale": "IT-adjacent gated residential",
+        "pop5km": 240000,
+        "households5km": 57000
+      },
+      "geometry": { "type": "Point", "coordinates": [78.3364, 17.3908] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "add-004",
+        "name": "Miyapur",
+        "type": "additional",
+        "phase": 1,
+        "rationale": "High-density middle-class residential",
+        "pop5km": 620000,
+        "households5km": 148000
+      },
+      "geometry": { "type": "Point", "coordinates": [78.3572, 17.4967] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "add-005",
+        "name": "Manikonda",
+        "type": "additional",
+        "phase": 1,
+        "rationale": "Growing residential + IT spillover",
+        "pop5km": 380000,
+        "households5km": 90000
+      },
+      "geometry": { "type": "Point", "coordinates": [78.3791, 17.4012] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "add-006",
+        "name": "Adibatla",
+        "type": "additional",
+        "phase": 1,
+        "rationale": "TCS / TATA Aerospace SEZ + PG housing",
+        "pop5km": 95000,
+        "households5km": 23000
+      },
+      "geometry": { "type": "Point", "coordinates": [78.5426, 17.2389] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "add-007",
+        "name": "Bachupally",
+        "type": "additional",
+        "phase": 1,
+        "rationale": "Villa & plot communities",
+        "pop5km": 280000,
+        "households5km": 67000
+      },
+      "geometry": { "type": "Point", "coordinates": [78.3891, 17.5402] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "add-008",
+        "name": "Chandanagar",
+        "type": "additional",
+        "phase": 1,
+        "rationale": "ORR northwest residential belt",
+        "pop5km": 340000,
+        "households5km": 81000
+      },
+      "geometry": { "type": "Point", "coordinates": [78.3270, 17.4934] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "add-009",
+        "name": "Nizampet",
+        "type": "additional",
+        "phase": 1,
+        "rationale": "Student + family mix near ORR",
+        "pop5km": 360000,
+        "households5km": 86000
+      },
+      "geometry": { "type": "Point", "coordinates": [78.3860, 17.5194] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "add-010",
+        "name": "Tukkuguda Community Kiosk",
+        "type": "additional",
+        "phase": 1,
+        "rationale": "Plant-adjacent local collection hub",
+        "pop5km": 220000,
+        "households5km": 52000
+      },
+      "geometry": { "type": "Point", "coordinates": [78.4780, 17.2110] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "add-011",
+        "name": "Maheshwaram",
+        "type": "additional",
+        "phase": 1,
+        "rationale": "EMC / IT SEZ spillover corridor",
+        "pop5km": 120000,
+        "households5km": 29000
+      },
+      "geometry": { "type": "Point", "coordinates": [78.4312, 17.1869] }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "add-012",
+        "name": "Kongara Kalan",
+        "type": "additional",
+        "phase": 1,
+        "rationale": "Future City / Pharma City growth pole",
+        "pop5km": 85000,
+        "households5km": 20000
+      },
+      "geometry": { "type": "Point", "coordinates": [78.5120, 17.2550] }
+    }
+  ]
+}
