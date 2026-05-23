@@ -4,7 +4,6 @@ import Hero from './components/Hero'
 import KpiStrip from './components/KpiStrip'
 import MapPage from './components/MapPage'
 import DistancePanel from './components/DistancePanel'
-import DemographicsPanel from './components/DemographicsPanel'
 import VolumePanel from './components/VolumePanel'
 import PricingPanel from './components/PricingPanel'
 import ZipsDifference from './components/ZipsDifference'
@@ -30,7 +29,6 @@ export default function App() {
           <Hero onOpenMap={() => setActiveTab('map')} />
           <KpiStrip />
           <DistancePanel />
-          <DemographicsPanel />
           <VolumePanel />
           <PricingPanel />
           <ZipsDifference />

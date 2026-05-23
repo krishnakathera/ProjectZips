@@ -142,7 +142,7 @@ export default function DistancePanel({ compact = false, embedded = false, sideb
           </>
         )}
         {embedded && (
-          <h2 className="mb-4 text-lg font-bold text-zips-navy">Distance &amp; demographics tables</h2>
+          <h2 className="mb-4 text-lg font-bold text-zips-navy">Distance tables</h2>
         )}
 
         <div className={embedded ? 'space-y-6' : 'mt-8 space-y-8'}>
