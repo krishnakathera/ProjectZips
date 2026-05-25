@@ -27,10 +27,12 @@ export default function VolumePanel() {
   ]
 
   return (
-    <section className="bg-white py-12">
+    <section className="bg-white py-8 sm:py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <h2 className="text-3xl font-extrabold text-zips-navy">Volume &amp; Plant Projections</h2>
-        <p className="mt-2 text-gray-600">
+        <h2 className="text-2xl font-extrabold text-zips-navy sm:text-3xl">
+          Volume &amp; Plant Projections
+        </h2>
+        <p className="mt-2 text-sm text-gray-600 sm:text-base">
           Tukkuguda central plant capacity and daily garment processing targets.
         </p>
 
@@ -40,16 +42,19 @@ export default function VolumePanel() {
               key={stat.label}
               className="rounded-xl border border-gray-200 bg-zips-gray-50 p-5 text-center"
             >
-              <p className="text-3xl font-extrabold text-zips-orange">{stat.value}</p>
+              <p className="text-2xl font-extrabold text-zips-orange sm:text-3xl">{stat.value}</p>
               <p className="mt-1 font-semibold text-zips-navy">{stat.label}</p>
               <p className="text-sm text-gray-500">{stat.sub}</p>
             </div>
           ))}
         </div>
 
-        <div className="mt-8 rounded-xl border border-gray-200 bg-white p-6 shadow-sm">
-          <h3 className="text-lg font-bold text-zips-navy">Daily Garment Volume Growth</h3>
-          <ResponsiveContainer width="100%" height={320}>
+        <div className="mt-8 rounded-xl border border-gray-200 bg-white p-4 shadow-sm sm:p-6">
+          <h3 className="text-base font-bold text-zips-navy sm:text-lg">
+            Daily Garment Volume Growth
+          </h3>
+          <div className="mt-4 h-[260px] sm:h-[320px]">
+          <ResponsiveContainer width="100%" height="100%">
             <LineChart data={volume.projections}>
               <CartesianGrid strokeDasharray="3 3" stroke="#e9ecef" />
               <XAxis dataKey="month" />
@@ -70,10 +75,11 @@ export default function VolumePanel() {
               />
             </LineChart>
           </ResponsiveContainer>
+          </div>
         </div>
 
-        <div className="mt-8 overflow-x-auto rounded-xl border border-gray-200 shadow-sm">
-          <table className="w-full min-w-[480px] text-left text-sm">
+        <div className="table-scroll mt-8 rounded-xl border border-gray-200 shadow-sm">
+          <table className="w-full min-w-[400px] text-left text-sm">
             <thead className="bg-zips-orange text-white">
               <tr>
                 <th className="px-4 py-3">Period</th>

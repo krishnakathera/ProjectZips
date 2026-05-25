@@ -19,7 +19,7 @@ export default function App() {
   }, [activeTab])
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen overflow-x-hidden bg-white">
       <Header activeTab={activeTab} onTabChange={setActiveTab} />
 
       {activeTab === 'map' && <MapPage />}

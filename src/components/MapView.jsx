@@ -12,6 +12,7 @@ import L from 'leaflet'
 import { useEffect, useMemo, useState } from 'react'
 import routes from '../data/routes.json'
 import { useMapLayers } from '../hooks/useMapLayers'
+import { useMediaQuery } from '../hooks/useMediaQuery'
 import { getEnrichedLocations, getPlant } from '../utils/locations'
 
 const SATELLITE_URL =
@@ -69,7 +70,14 @@ function createIcon(type, highlighted) {
   })
 }
 
-function MapController({ fitNetwork, fitPlant, focusStore, resizeSignal }) {
+function MapController({
+  fitNetwork,
+  fitPlant,
+  focusStore,
+  resizeSignal,
+  layoutSignal,
+  mapVisible,
+}) {
   const map = useMap()
 
   useEffect(() => {
@@ -80,6 +88,23 @@ function MapController({ fitNetwork, fitPlant, focusStore, resizeSignal }) {
     if (resizeSignal == null) return
     map.invalidateSize()
   }, [map, resizeSignal])
+
+  useEffect(() => {
+    if (layoutSignal == null) return
+    const id = requestAnimationFrame(() => map.invalidateSize())
+    return () => cancelAnimationFrame(id)
+  }, [map, layoutSignal])
+
+  /* Leaflet measures 0×0 while the map panel is display:none (mobile Tables tab). */
+  useEffect(() => {
+    if (!mapVisible) return
+    const id = requestAnimationFrame(() => map.invalidateSize())
+    const t = setTimeout(() => map.invalidateSize(), 120)
+    return () => {
+      cancelAnimationFrame(id)
+      clearTimeout(t)
+    }
+  }, [map, mapVisible])
 
   useEffect(() => {
     if (fitNetwork) map.fitBounds(NETWORK_BOUNDS, { padding: [40, 40] })
@@ -174,7 +199,13 @@ function StorePopup({ p }) {
   )
 }
 
-export default function MapView({ fullscreen = false, fillHeight = false, resizeSignal }) {
+export default function MapView({
+  fullscreen = false,
+  fillHeight = false,
+  resizeSignal,
+  mapVisible = true,
+}) {
+  const isMobile = useMediaQuery('(max-width: 1023px)')
   const locations = useMemo(() => getEnrichedLocations(), [])
   const plant = useMemo(() => getPlant(), [])
 
@@ -194,6 +225,9 @@ export default function MapView({ fullscreen = false, fillHeight = false, resize
   const [fitNetwork, setFitNetwork] = useState(false)
   const [fitPlant, setFitPlant] = useState(false)
   const [search, setSearch] = useState('')
+  const [controlsOpen, setControlsOpen] = useState(false)
+
+  const showControlsPanel = !isMobile || !fullscreen || controlsOpen
 
   const plantLatLng = plant
     ? [plant.geometry.coordinates[1], plant.geometry.coordinates[0]]
@@ -225,10 +259,37 @@ export default function MapView({ fullscreen = false, fillHeight = false, resize
     : null
 
   const mapHeight =
-    fillHeight && fullscreen ? undefined : fullscreen ? 'calc(100vh - 56px)' : 'min(70vh, 720px)'
+    fillHeight && fullscreen
+      ? undefined
+      : fullscreen
+        ? 'min(55vh, calc(100dvh - 120px))'
+        : 'min(55vh, 520px)'
 
   return (
-    <div className={fullscreen ? 'flex h-full flex-col bg-zips-navy' : ''}>
+    <div className={fullscreen ? 'flex h-full min-h-0 flex-col bg-zips-navy' : ''}>
+      {fullscreen && isMobile && (
+        <div className="flex shrink-0 items-center gap-2 border-b border-gray-700 bg-zips-navy px-3 py-2 lg:hidden">
+          <button
+            type="button"
+            onClick={() => setControlsOpen((open) => !open)}
+            className="flex flex-1 items-center justify-center gap-2 rounded-lg bg-zips-orange px-3 py-2.5 text-sm font-bold text-white"
+            aria-expanded={controlsOpen}
+          >
+            {controlsOpen ? 'Hide map controls' : 'Show map controls'}
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              setFitNetwork(true)
+              setTimeout(() => setFitNetwork(false), 150)
+            }}
+            className="shrink-0 rounded-lg bg-gray-700 px-3 py-2.5 text-xs font-semibold text-white"
+          >
+            Fit all
+          </button>
+        </div>
+      )}
+
       <div
         className={
           fullscreen
@@ -239,7 +300,9 @@ export default function MapView({ fullscreen = false, fillHeight = false, resize
         <aside
           className={
             fullscreen
-              ? 'flex w-full shrink-0 flex-col gap-3 overflow-y-auto border-r border-gray-700 bg-zips-navy p-4 text-white lg:w-80'
+              ? `flex w-full shrink-0 flex-col gap-3 overflow-y-auto overscroll-contain border-r border-gray-700 bg-zips-navy p-3 text-white sm:p-4 lg:w-80 ${
+                  showControlsPanel ? 'max-h-[42vh] lg:max-h-none' : 'hidden lg:flex'
+                }`
               : 'flex shrink-0 flex-col gap-3 lg:w-80'
           }
         >
@@ -391,7 +454,7 @@ export default function MapView({ fullscreen = false, fillHeight = false, resize
             }
           >
             <p className="mb-2 px-1 text-xs font-bold uppercase opacity-70">Jump to store</p>
-            <div className="map-jump-scroll h-[22rem] overflow-y-scroll pr-1">
+            <div className="map-jump-scroll max-h-[12rem] overflow-y-scroll pr-1 sm:max-h-[16rem] lg:h-[22rem] lg:max-h-[22rem]">
             {drops.map((f) => (
               <button
                 key={f.properties.id}
@@ -417,7 +480,7 @@ export default function MapView({ fullscreen = false, fillHeight = false, resize
         </aside>
 
         <div
-          className={`flex-1 overflow-hidden border-gray-200 shadow-lg ${
+          className={`min-h-[240px] flex-1 overflow-hidden border-gray-200 shadow-lg sm:min-h-[320px] ${
             fillHeight && fullscreen
               ? 'min-h-0 border-0 lg:rounded-none'
               : 'rounded-xl border'
@@ -425,20 +488,26 @@ export default function MapView({ fullscreen = false, fillHeight = false, resize
           style={
             fillHeight && fullscreen
               ? undefined
-              : { height: mapHeight, minHeight: fullscreen && !fillHeight ? undefined : 500 }
+              : { height: mapHeight, minHeight: fillHeight ? undefined : isMobile ? 280 : 400 }
           }
         >
           <MapContainer
             center={plantLatLng}
             zoom={11}
-            className="h-full w-full"
-            scrollWheelZoom
+            className="z-0 h-full w-full touch-none"
+            dragging
+            touchZoom
+            doubleClickZoom
+            scrollWheelZoom={!isMobile}
+            zoomControl
           >
             <MapController
               fitNetwork={fitNetwork}
               fitPlant={fitPlant}
               focusStore={focusStore}
               resizeSignal={resizeSignal}
+              layoutSignal={showControlsPanel}
+              mapVisible={mapVisible}
             />
             <TileLayer
               key={baseMap}

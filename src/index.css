@@ -12,17 +12,45 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
   font-family: var(--font-sans);
   color: var(--color-zips-gray-900);
   background: #fff;
+  overflow-x: hidden;
+}
+
+/* Horizontal scroll tables on small screens */
+.table-scroll {
+  -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+}
+
+.table-scroll > table {
+  min-width: 100%;
+}
+
+/* Safe area for notched phones */
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+.safe-top {
+  padding-top: env(safe-area-inset-top, 0);
 }
 
 .leaflet-container {
   font-family: var(--font-sans);
   z-index: 0;
+  touch-action: none;
+}
+
+.leaflet-pane,
+.leaflet-top,
+.leaflet-bottom {
+  touch-action: none;
 }
 
 .map-jump-scroll {
@@ -82,4 +110,36 @@ body {
   height: 24px;
   background: #2563eb;
   color: #fff;
+}
+
+@media (max-width: 1023px) {
+  .leaflet-popup-content {
+    margin: 10px 12px;
+    max-width: min(280px, calc(100vw - 48px));
+  }
+
+  .leaflet-control-zoom a {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+  }
+
+  .marker-plant {
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+  }
+
+  .marker-flagship {
+    width: 36px;
+    height: 36px;
+    font-size: 15px;
+  }
+
+  .marker-additional {
+    width: 30px;
+    height: 30px;
+    font-size: 13px;
+  }
 }

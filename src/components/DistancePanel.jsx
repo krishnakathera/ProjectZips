@@ -11,9 +11,9 @@ function DistanceTable({ title, subtitle, stores, variant, compact = false }) {
         <h3 className={compact ? 'text-sm font-bold' : 'font-bold'}>{title}</h3>
         <p className="text-xs text-gray-300">{subtitle}</p>
       </div>
-      <div className={compact ? '' : 'overflow-x-auto'}>
+      <div className={compact ? 'table-scroll -mx-px' : 'table-scroll'}>
         <table
-          className={`w-full text-left ${compact ? 'text-xs' : 'min-w-[720px] text-sm'}`}
+          className={`w-full text-left ${compact ? 'min-w-[640px] text-xs' : 'min-w-[720px] text-sm'}`}
         >
           <thead className="bg-zips-gray-50 text-xs uppercase text-gray-500">
             <tr>
@@ -130,12 +130,14 @@ export default function DistancePanel({ compact = false, embedded = false, sideb
   }
 
   return (
-    <section id="distances" className={embedded ? 'py-6' : 'bg-zips-gray-50 py-12'}>
+    <section id="distances" className={embedded ? 'py-6' : 'bg-zips-gray-50 py-8 sm:py-12'}>
       <div className={embedded ? 'px-4' : 'mx-auto max-w-7xl px-4 sm:px-6'}>
         {!embedded && (
           <>
-            <h2 className="text-3xl font-extrabold text-zips-navy">Distances from Central Plant</h2>
-            <p className="mt-2 text-gray-600">
+            <h2 className="text-2xl font-extrabold text-zips-navy sm:text-3xl">
+              Distances from Central Plant
+            </h2>
+            <p className="mt-2 text-sm text-gray-600 sm:text-base">
               Tukkuguda ORR Exit 14 — estimated road distances (~1.35× straight line), ~60 km/h avg
               drive time. Population and income are 2026 catchment estimates (5 km radius).
             </p>

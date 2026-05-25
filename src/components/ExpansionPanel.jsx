@@ -7,10 +7,10 @@ export default function ExpansionPanel() {
   const [showCapex, setShowCapex] = useState(false)
 
   return (
-    <section id="expansion" className="bg-zips-gray-50 py-12">
+    <section id="expansion" className="bg-zips-gray-50 py-8 sm:py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <h2 className="text-3xl font-extrabold text-zips-navy">Expansion Strategy</h2>
-        <p className="mt-2 text-gray-600">
+        <h2 className="text-2xl font-extrabold text-zips-navy sm:text-3xl">Expansion Strategy</h2>
+        <p className="mt-2 text-sm text-gray-600 sm:text-base">
           Two-phase rollout — Hyderabad dominance first, then national metro expansion.
         </p>
 
@@ -20,14 +20,14 @@ export default function ExpansionPanel() {
               key={phase.id}
               className="overflow-hidden rounded-xl border border-gray-200 bg-white shadow-lg"
             >
-              <div className="bg-zips-navy px-6 py-4">
+              <div className="bg-zips-navy px-4 py-4 sm:px-6">
                 <span className="rounded-full bg-zips-orange px-3 py-1 text-xs font-bold uppercase">
                   {phase.name}
                 </span>
                 <h3 className="mt-2 text-xl font-bold text-white">{phase.title}</h3>
                 <p className="text-sm text-gray-300">{phase.timeline}</p>
               </div>
-              <div className="p-6">
+              <div className="p-4 sm:p-6">
                 <p className="text-gray-600">{phase.description}</p>
                 <ul className="mt-4 space-y-2">
                   {phase.highlights.map((h) => (

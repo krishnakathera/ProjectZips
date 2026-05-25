@@ -2,10 +2,12 @@ import expansion from '../data/expansion.json'
 
 export default function ZipsDifference() {
   return (
-    <section className="bg-white py-12">
+    <section className="bg-white py-8 sm:py-12">
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
-        <h2 className="text-center text-3xl font-extrabold text-zips-navy">The Zips India Model</h2>
-        <p className="mt-2 text-center text-gray-600">
+        <h2 className="text-center text-2xl font-extrabold text-zips-navy sm:text-3xl">
+          The Zips India Model
+        </h2>
+        <p className="mt-2 text-center text-sm text-gray-600 sm:text-base">
           Convenient. Affordable. Fast. — inspired by the ZIPS Cleaners hub-and-spoke approach.
         </p>
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
