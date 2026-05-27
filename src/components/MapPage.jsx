@@ -82,7 +82,7 @@ export default function MapPage() {
         <aside
           className={`flex w-full shrink-0 flex-col border-gray-200 bg-zips-gray-50 lg:max-h-none lg:w-[var(--sidebar-width)] lg:border-l lg:border-t-0 ${
             showTables
-              ? 'min-h-0 flex-1 border-t lg:max-h-none lg:flex'
+              ? 'min-h-0 flex-1 border-t lg:max-h-none lg:flex lg:flex-none'
               : 'hidden lg:flex'
           }`}
         >
